@@ -12,7 +12,7 @@ let streak = 0;
 const difficulties = {
   easy: { pairs: 2, time: 90 },
   medium: { pairs: 3, time: 60 },
-  hard: { pairs: 4, time: 45 }
+  hard: { pairs: 4, time: 5 }
 };
 
 function setDifficulty(level) {
@@ -22,7 +22,6 @@ function setDifficulty(level) {
   $("#left").text(totalPairs);
   $("#timer").text(timeLeft);
 
-  // Set difficulty class on #game_grid for CSS
   $("#game_grid").removeClass("easy medium hard").addClass(level);
 
   $(".card").each((i, el) => {
